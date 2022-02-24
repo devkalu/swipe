@@ -10,6 +10,12 @@ import {
 import Deck from "./src/Deck";
 import { DATA } from "./src/data";
 import { Card, Button } from "react-native-elements";
+import Animations from "./src/Animations";
+import AnimationedInput from "./src/AnimatedInput";
+import SpinningLoading from "./src/SpinningLoading";
+import WelcomeScreen from "./src/WelcomeScreen";
+import NumberAnimations from "./src/NumberAnimations";
+import StaggerAnimations from "./src/StaggerAnimation";
 
 const renderCard = (item) => {
   return (
@@ -42,11 +48,17 @@ const renderNoMoreCards = () => {
 export default function App() {
   return (
     <ScrollView>
-      <Deck
+      <StaggerAnimations />
+      {/* <NumberAnimations /> */}
+      {/* <WelcomeScreen /> */}
+      {/* <SpinningLoading /> */}
+      {/* <AnimationedInput /> */}
+      {/* <Animations /> */}
+      {/* <Deck
         data={DATA}
         renderCard={renderCard}
         renderNoMoreCards={renderNoMoreCards}
-      />
+      /> */}
     </ScrollView>
   );
 }

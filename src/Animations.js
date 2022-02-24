@@ -7,13 +7,16 @@ export default class Animations extends Component {
     Animated.timing(this.marginTop, {
       toValue: 200,
       duration: 500,
+      useNativeDriver: true,
     }).start();
   };
   render() {
     return (
-      <View style={style.container}>
+      <View style={styles.container}>
         <Button title="Animate Box" onPress={this.animate} />
-        <Animated.View style={[styles.box, { marginTop: this.marginTop }]} />
+        <Animated.View
+          style={[styles.box, { transform: [{ translateY: this.marginTop }] }]}
+        />
       </View>
     );
   }
