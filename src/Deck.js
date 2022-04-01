@@ -5,7 +5,7 @@ import React, {
   useLayoutEffect,
   useEffect,
 } from "react";
-import { render } from "react-dom";
+
 import {
   View,
   Animated,
@@ -115,7 +115,13 @@ const Deck = ({
         return (
           <Animated.View
             key={item.id}
-            style={[styles.cardStyle, { top: 10 * (index - state) }]}
+            style={[
+              styles.cardStyle,
+              {
+                top: 20 * (index - state),
+                width: SCREEN_WIDTH - index,
+              },
+            ]}
           >
             {renderCard(item)}
           </Animated.View>
@@ -135,6 +141,7 @@ const styles = StyleSheet.create({
   cardStyle: {
     position: "absolute",
     width: SCREEN_WIDTH,
+    alignSelf: "center",
   },
 });
 

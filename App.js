@@ -48,17 +48,11 @@ const renderNoMoreCards = () => {
 export default function App() {
   return (
     <ScrollView>
-      <StaggerAnimations />
-      {/* <NumberAnimations /> */}
-      {/* <WelcomeScreen /> */}
-      {/* <SpinningLoading /> */}
-      {/* <AnimationedInput /> */}
-      {/* <Animations /> */}
-      {/* <Deck
+      <Deck
         data={DATA}
         renderCard={renderCard}
         renderNoMoreCards={renderNoMoreCards}
-      /> */}
+      />
     </ScrollView>
   );
 }
